@@ -9,7 +9,7 @@
       src="https://kit.fontawesome.com/1b4d52fbf2.js"
       crossorigin="anonymous"
     ></script>
-  <script defer src="/quiz/[name].js/runtime.js"></script><script defer src="/quiz/[name].js/edit.js"></script></head>
+  <script defer src="/quiz/runtime.js"></script><script defer src="/quiz/quiz.js"></script></head>
   <body id="body">
     <header class="flex-header container">
   <nav class="nav">
@@ -37,7 +37,37 @@
 
     <main class="flex-main">
       <article class="flex-article">
-        edit
+        <h1 class="quiz-name"></h1>
+
+<div class="card-container">
+
+  <div class="next-quiz__container">
+    <button id="button__reset" class="button__reset button--reduce">reset</button>
+    <button id="button__next-quiz" class="button__next-quiz button--reduce">
+      next quiz
+    </button>
+  </div>
+
+  <div id="card" class="card">
+    <div class="card__side card__name">
+      <div class="text-wrapper"></div>
+    </div>
+    <div class="card__side card__definition rotate">
+      <div class="text-wrapper"></div>
+    </div>
+  </div>
+
+  <div class="card-container__buttons">
+    <button
+      id="button__skip"
+      class="button__skip button--reduce"
+      title="I already know this"
+    >
+      skip
+    </button>
+    <button id="button__next" class="button__next button--reduce">next</button>
+  </div>
+</div>
 
         <!-- <h1>To build this page I used:</h1>
 <div>
