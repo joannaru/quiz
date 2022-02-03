@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Split Landing Page</title>
+    <!-- <link rel="stylesheet" type="text/css" href="./css/style.css" /> -->
+    <script
+      src="https://kit.fontawesome.com/1b4d52fbf2.js"
+      crossorigin="anonymous"
+    ></script>
+  <script defer src="/memo/runtime.js"></script><script defer src="/memo/start.js"></script></head>
+  <body id="body">
+    <main>
+      <div class="cards-list">
+        <div class="cards-list__card cards-list__card--left">
+          <div class="card">
+            <picture class="card__image">
+              <source
+                class="image--small"
+                media="(max-width: 500px)"
+                data-srcset="/memo/5038394051b47743aa21.jpg"
+              />
+              <source
+                class="image--medium"
+                media="(min-width: 501px) and (max-width:800px)"
+                data-srcset="/memo/d1a560bd2e7c2fa25b14.jpg"
+              />
+
+              <img
+                class="image--large lazyload"
+                src="/memo/6ea3bd1acb4761ec9a59.jpg"
+                alt="Editing"
+              />
+            </picture>
+            <h1 class="card__heading">Edit quizes</h1>
+            <p class="card__description">Create & edit quizzes</p>
+            <a href="/quiz/list.html" class="card__button">Edit Now</a>
+          </div>
+        </div>
+
+        <div class="cards-list__card cards-list__card--right card">
+          <picture class="card__image">
+            <source
+              class="image--small"
+              media="(max-width: 500px)"
+              data-srcset="/memo/62ffc8fda287c1070483.jpg"
+            />
+            <source
+              class="image--medium"
+              media="(min-width: 501px) and (max-width:800px)"
+              data-srcset="/memo/6f2b1995e42254538a27.jpg"
+            />
+
+            <img
+              class="image--large lazyload"
+              src="/memo/1a9b062bf5ae3730da43.jpg"
+              alt="Editing"
+            />
+          </picture>
+          <h1 class="card__heading">Learn</h1>
+          <p class="card__description">Learn concepts from quizzes</p>
+          <a href="/quiz/quizlet.html" class="card__button">Learn Now</a>
+        </div>
+      </div>
+    </main>
+    <script type="module" src="../start.js"></script>
+  </body>
+</html>

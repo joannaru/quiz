@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Split Landing Page</title>
+    <script
+      src="https://kit.fontawesome.com/1b4d52fbf2.js"
+      crossorigin="anonymous"
+    ></script>
+  <script defer src="/memo/runtime.js"></script><script defer src="/memo/about.js"></script></head>
+  <body id="body">
+    <header class="flex-header container">
+  <nav class="nav">
+    <a href="/" class="nav__logo">
+      <h1 class="logo__header">
+        <i class="icon fa fa-puzzle-piece"></i> Quizilla
+      </h1></a
+    >
+    <div class="nav__list">
+      <ul class="list">
+        <li class="list__item">
+          <a class="nav__link" href="/quiz/quizlet.html">Learn</a>
+        </li>
+        <li class="list__item">
+          <a class="nav__link" href="/quiz/list.html">Quizes</a>
+        </li>
+        <li class="list__item">
+          <a class="nav__link" href="/quiz/about.html">About</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+</header>
+
+
+    <main class="flex-main">
+      <article class="flex-article">
+        <h1>To build this page I used:</h1>
+<div>
+  <h2 class="subtitle">Webpack</h2>
+  <p>
+    Main purpose is to bundle JavaScript files for usage in a browser. It is
+    also capable of transforming, bundling, or packaging just about any resource
+    or asset - so I also used it to
+    <u
+      >load CSS files, EJS templates and plain HTML files with suitable
+      loaders</u
+    >
+  </p>
+  <h2 class="subtitle">JavaScript ES6</h2>
+  <dl class="list">
+    <dt class="list__name">Classes</dt>
+    <dt class="list__name">Property descriptors present in objects</dt>
+    <dt class="list__name">Arrow functions</dt>
+    <dt class="list__name">Immutability</dt>
+    <dd class="list__def">frozen objects</dd>
+  </dl>
+
+  <h2 class="subtitle">Axios</h2>
+  Promise-based HTTP Client for node.js and the browser
+
+  <h2 class="subtitle">EJS</h2>
+  <p>
+    Embedded JavaScript templates - templating language that lets generate HTML
+    markup with plain JavaScript
+  </p>
+
+  <h2 class="subtitle">CSS</h2>
+  <dl class="list">
+    <dt class="list__name">PostCSS</dt>
+    <dd class="list__def">
+      Node.js package which transform all of CSS using JavaScript, thereby
+      achieving much <b>faster</b> build times than other processors.
+      <br />
+      PostCSS plugins allows using variables, mixins, imports - the same way as
+      in
+      <b>Sass</b> CSS extension language
+    </dd>
+    <dt class="list__name">Autoprefixer</dt>
+    <dd class="list__def">
+      a PostCSS plugin which parses CSS and adds vendor prefixes
+    </dd>
+    <dt class="list__name">Normalize.css</dt>
+    <dd class="list__def">
+      Node.js package which makes
+      <u>browsers render all elements more consistently</u>
+      and in line with modern standards
+    </dd>
+    <dt class="list__name">Block Element Modifier methodology</dt>
+    <dd class="list__def">
+      BEM’s naming convention and independent blocks make code reusable and
+      modular
+    </dd>
+    <dt class="list__name">Mobile First approach</dt>
+    <dd class="list__def">
+      layout was created in a way where
+      <u>the default configuration is for narrow screen/mobile devices</u>, and
+      layout features for wider viewports are then layered on top of that
+      default helps achieve better performance
+    </dd>
+    <dt class="list__name">Responsive Images</dt>
+    <dd class="list__def">
+      the point of responsive images is loading
+      <u>the smallest, most impactful resource</u>
+    </dd>
+    <dt class="list__name">Lazy loading of images</dt>
+    <dd class="list__def">
+      loading of images on a page - when those images are actually needed,
+      instead of loading them up front
+    </dd>
+  </dl>
+</div>
+
+        <!-- <h1>To build this page I used:</h1>
+<div>
+  <h2 class="subtitle">Webpack</h2>
+  <p>
+    Main purpose is to bundle JavaScript files for usage in a browser. It is
+    also capable of transforming, bundling, or packaging just about any resource
+    or asset - so I also used it to
+    <u
+      >load CSS files, EJS templates and plain HTML files with suitable
+      loaders</u
+    >
+  </p>
+  <h2 class="subtitle">JavaScript ES6</h2>
+  <dl class="list">
+    <dt class="list__name">Classes</dt>
+    <dt class="list__name">Property descriptors present in objects</dt>
+    <dt class="list__name">Arrow functions</dt>
+    <dt class="list__name">Immutability</dt>
+    <dd class="list__def">frozen objects</dd>
+  </dl>
+
+  <h2 class="subtitle">Axios</h2>
+  Promise-based HTTP Client for node.js and the browser
+
+  <h2 class="subtitle">EJS</h2>
+  <p>
+    Embedded JavaScript templates - templating language that lets generate HTML
+    markup with plain JavaScript
+  </p>
+
+  <h2 class="subtitle">CSS</h2>
+  <dl class="list">
+    <dt class="list__name">PostCSS</dt>
+    <dd class="list__def">
+      Node.js package which transform all of CSS using JavaScript, thereby
+      achieving much <b>faster</b> build times than other processors.
+      <br />
+      PostCSS plugins allows using variables, mixins, imports - the same way as
+      in
+      <b>Sass</b> CSS extension language
+    </dd>
+    <dt class="list__name">Autoprefixer</dt>
+    <dd class="list__def">
+      a PostCSS plugin which parses CSS and adds vendor prefixes
+    </dd>
+    <dt class="list__name">Normalize.css</dt>
+    <dd class="list__def">
+      Node.js package which makes
+      <u>browsers render all elements more consistently</u>
+      and in line with modern standards
+    </dd>
+    <dt class="list__name">Block Element Modifier methodology</dt>
+    <dd class="list__def">
+      BEM’s naming convention and independent blocks make code reusable and
+      modular
+    </dd>
+    <dt class="list__name">Mobile First approach</dt>
+    <dd class="list__def">
+      layout was created in a way where
+      <u>the default configuration is for narrow screen/mobile devices</u>, and
+      layout features for wider viewports are then layered on top of that
+      default helps achieve better performance
+    </dd>
+    <dt class="list__name">Responsive Images</dt>
+    <dd class="list__def">
+      the point of responsive images is loading
+      <u>the smallest, most impactful resource</u>
+    </dd>
+    <dt class="list__name">Lazy loading of images</dt>
+    <dd class="list__def">
+      loading of images on a page - when those images are actually needed,
+      instead of loading them up front
+    </dd>
+  </dl>
+</div>
+ -->
+        <!-- <h1>Quizes</h1>
+<div class="list__buttons">
+  <button class="btn-toggle-quizes button--reduce"><i class="fas fa-chevron-down"></i></button>
+
+  <button id="btn-new-quiz" class="btn-new-quiz button--reduce">
+    <i class="fas fa-plus" aria-hidden="true"></i> New Quiz
+  </button>
+<div>
+<div id="modal" class="modal">
+<i id="modal__btn-close" class="modal__btn-close fas fa-times" title="close"></i>
+<div id="modal__body" class="modal__body"></div>
+</div> -->
+        <!-- <h1 class="quiz-name"></h1>
+
+<div class="card-container">
+
+  <div class="next-quiz__container">
+    <button id="button__reset" class="button__reset button--reduce">reset</button>
+    <button id="button__next-quiz" class="button__next-quiz button--reduce">
+      next quiz
+    </button>
+  </div>
+
+  <div id="card" class="card">
+    <div class="card__side card__name">
+      <div class="text-wrapper"></div>
+    </div>
+    <div class="card__side card__definition rotate">
+      <div class="text-wrapper"></div>
+    </div>
+  </div>
+
+  <div class="card-container__buttons">
+    <button
+      id="button__skip"
+      class="button__skip button--reduce"
+      title="I already know this"
+    >
+      skip
+    </button>
+    <button id="button__next" class="button__next button--reduce">next</button>
+  </div>
+</div>
+ -->
+      </article>
+    </main>
+
+    <footer class="flex-footer container">
+  <div class="flex-footer__column column">
+    <h3 class="column__heading">Author</h3>
+    <ul class="column__links">
+      <li class="footer-link">Joanna Rudak</li>
+    </ul>
+  </div>
+  <div class="flex-footer__column column">
+    <h3 class="column__heading">Module Bundler</h3>
+    <ul class="column__links">
+      <li class="footer-link">Webpack 4.41.5</li>
+    </ul>
+  </div>
+  <div class="flex-footer__column column">
+    <h3 class="column__heading">Templating language</h3>
+    <ul class="column__links">
+      <li class="footer-link">EJS</li>
+    </ul>
+  </div>
+  <div class="flex-footer__column column">
+    <h3 class="column__heading">CSS</h3>
+    <ul class="column__links">
+      <li class="footer-link">PostCSS</li>
+    </ul>
+  </div>
+</footer>
+
+  </body>
+</html>
