@@ -1,0 +1,135 @@
+@import '../base/_variables.css';
+@import '../base/_mixins.css';
+
+$cardWidthSmall:15rem;
+$cardWidthMedium:16rem;
+$cardWidthLarge:20rem;
+
+.flex-article {
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    .next-quiz__container {
+        width: 100%;
+        margin-bottom: 2rem;
+        text-align: center;
+
+        .button__reset {
+            background-color: $colorLightGrey;
+        }
+
+        .button__next-quiz {
+            background-color: $colorPrimaryLight;
+        }
+    }
+
+    .card-container {
+
+        flex-direction: column;
+        display: flex;
+        justify-items: center;
+        align-items: center;
+
+        padding: 0rem 0 2rem 0;
+
+        &--hidden {
+            display: none;
+        }
+
+        .card {
+            width: $cardWidthSmall;
+            height: $cardWidthSmall;
+
+            @mixin atMedium {
+                height: $cardWidthMedium;
+                width: $cardWidthMedium;
+            }
+
+            @mixin atLarge {
+                height: $cardWidthLarge;
+                width: $cardWidthLarge;
+            }
+
+            position: relative;
+            cursor: pointer;
+            padding: 0.5rem;
+
+            perspective: 100rem;
+
+            &__side {
+                width: 100%;
+                height: 100%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                position: absolute;
+                top: 0rem;
+                left: 0rem;
+                transform-style: preserve-3d;
+                backface-visibility: hidden;
+                transition: transform 0.5s ease;
+                border-radius: 5%;
+                box-shadow: 0 0 0.5rem lightgrey;
+                padding: 1.5rem;
+
+                .text-wrapper {
+                    overflow-y: hidden;
+                    max-height: 100%;
+                    display: flex;
+                    margin: auto;
+
+                    &--scroll {
+                        overflow-y: scroll;
+                    }
+                }
+            }
+
+            &__name {
+                .text-wrapper {
+                    text-align: center;
+                    font-size: 1.5rem;
+
+                    @mixin atMedium {
+                        font-size: 2rem;
+                    }
+
+                    @mixin atLarge {
+                        font-size: 2rem;
+                    }
+
+                    color: #fff;
+                }
+
+                background: linear-gradient($colorWarning, $colorDark);
+            }
+
+            &__definition {
+                .text-wrapper {
+                    text-align: justify;
+                }
+
+                background: #fff;
+            }
+        }
+
+        .rotate {
+            transform: rotateY(180deg);
+            opacity: 0;
+        }
+
+        &__buttons {
+            justify-content: center;
+            margin-top: 2rem;
+            flex: 1;
+            display: flex;
+            width: 100%;
+            justify-content: space-between;
+
+            .button__skip {
+                background-color: $colorLightGrey;
+
+            }
+        }
+    }
+}

@@ -1,0 +1,68 @@
+@import './_variables.css';
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    width: 100vw;
+    min-height: 100vh;
+    margin: 0;
+}
+
+main {
+    display: flex;
+    height: 100%;
+    width: 100%;
+}
+
+a {
+    text-decoration: none;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    justify-content: space-between;
+    display: flex;
+    flex-direction: column;
+
+    li {
+        display: inline-block;
+        align-items: center;
+    }
+}
+
+.button--reduce:active {
+    transform: scale(0.9);
+}
+
+button:disabled {
+    opacity: 0.5
+}
+
+.loader {
+    height: 10rem;
+    width: 10rem;
+    border: 0.5rem solid #ccc;
+    border-top-color: $colorPrimary;
+    border-radius: 50%;
+    animation: spin 2s linear infinite;
+    margin: 2rem;
+
+    &--hidden {
+        display: none;
+    }
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}

@@ -1,0 +1,58 @@
+@import './_header.css';
+@import './_footer.css';
+
+* {
+    font-family: Poppins;
+    margin: 0;
+    color: $colorAlmostBlack;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-weight: 400;
+}
+
+body {
+    width: 100vw;
+
+    @mixin atMedium {}
+
+    @mixin atLarge {
+        max-height: 100vh;
+        overflow: scroll;
+    }
+
+}
+
+button {
+    padding: 0.5rem 1.5rem 0.5rem 1.5rem;
+    background-color: $colorAccent;
+    border: none;
+    border-radius: 0.3rem;
+    cursor: pointer;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    width: 100vw;
+
+    .flex-main {
+        display: flex;
+        width: 100%;
+        flex: 1;
+        background-color: $colorLight;
+
+        .flex-article {
+            display: flex;
+            flex: 1;
+
+            padding: 1rem;
+
+        }
+    }
+}

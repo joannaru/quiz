@@ -1,0 +1,143 @@
+.flex-header {
+    display: flex;
+    align-items: center;
+    max-height: 20vh;
+    border-bottom: 0.06rem solid #ccc;
+    padding: $paddingSmall 0 $paddingSmall 0;
+
+
+    @mixin atMedium {
+        max-height: 15vh;
+        padding-left: $paddingMedium;
+        padding-right: $paddingMedium;
+    }
+
+    @mixin atLarge {
+        max-height: 15vh;
+        padding-left: $paddingLarge;
+        padding-right: $paddingLarge;
+    }
+
+    .nav {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+
+        @mixin atMedium {
+            flex-direction: row;
+
+        }
+
+        @mixin atLarge {
+            flex-direction: row;
+
+        }
+
+
+        &__logo {
+            display: flex;
+            color: $colorPrimary;
+            justify-content: center;
+
+
+            @mixin atMedium {
+                padding-bottom: 0rem;
+                align-items: center;
+
+            }
+
+            @mixin atLarge {
+                padding-bottom: 0rem;
+                align-items: center;
+
+            }
+
+
+
+            .logo__header,
+            .icon {
+                color: $colorPrimary;
+            }
+
+            .logo__header {
+                font-weight: 300;
+                margin: 0 0 0.5rem 0;
+
+
+                @mixin atMedium {
+                    margin: 0.5rem 0 0.5rem 0;
+                }
+
+                @mixin atLarge {
+                    margin: 0.5rem 0 0.5rem 0;
+                }
+
+            }
+        }
+
+        &__list {
+
+            display: flex;
+            flex: 1;
+            justify-content: center;
+
+            @mixin atMedium {
+                align-items: center;
+
+            }
+
+            @mixin atLarge {
+                align-items: center;
+                justify-content: start;
+                width: 70%;
+            }
+
+
+            .list {
+
+                align-items: center;
+                justify-content: flex-start;
+                flex-direction: column;
+
+                @mixin atMedium {
+                    flex-direction: row;
+                }
+
+                @mixin atLarge {
+                    flex-direction: row;
+                }
+
+                &__item {
+
+                    display: inline-block;
+
+
+                    @mixin atMedium {
+                        margin-left: 2rem;
+
+
+                    }
+
+                    @mixin atLarge {
+                        margin-left: 2rem;
+
+                    }
+
+
+
+                }
+
+            }
+        }
+
+
+
+        &__link {
+            color: $colorPrimary;
+            font-weight: 500;
+        }
+    }
+
+
+}

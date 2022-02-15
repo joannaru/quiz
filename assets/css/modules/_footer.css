@@ -1,0 +1,43 @@
+.flex-footer {
+    display: flex;
+    justify-content: space-between;
+    background-color: $colorLight;
+    padding: 1rem 0 1rem 0;
+    flex-direction: column;
+    flex-wrap: wrap;
+    padding-left: $paddingMedium;
+    padding-right: $paddingMedium;
+
+
+    @mixin atMedium {
+        flex-direction: column;
+        padding-left: $paddingMedium;
+        padding-right: $paddingMedium;
+    }
+
+    @mixin atLarge {
+        flex-direction: row;
+        padding-left: $paddingLarge;
+        padding-right: $paddingLarge;
+    }
+
+    &__column {
+        padding: 0.5rem 0 0.5rem 0;
+
+        @mixin atLarge {
+            padding: 0;
+        }
+
+        .column__links {
+            .footer-link {
+                font-weight: 200;
+                font-size: 0.9rem;
+                line-height: 2rem;
+            }
+        }
+
+
+    }
+
+
+}
